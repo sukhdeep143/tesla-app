@@ -27,10 +27,10 @@ function Header() {
         <CloseWeapper>
           <CustomClose />
         </CloseWeapper>
-          <li><a href='#'>Model S</a></li>
-          <li><a href='#'>Model 3</a></li>
-          <li><a href='#'>Model X</a></li>
-          <li><a href='#'>Model Y</a></li>
+          <li><a href='https://www.tesla.com/models'>Model S</a></li>
+          <li><a href='https://www.tesla.com/model3'>Model 3</a></li>
+          <li><a href='https://www.tesla.com/modelx'>Model X</a></li>
+          <li><a href='https://www.tesla.com/modely'>Model Y</a></li>
           <li><a href='#'>Cyber Truck</a></li>
           <li><a href='#'>Charger</a></li>
           <li><a href='#'>Shop</a></li>
