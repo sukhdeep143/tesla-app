@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@material-ui/icons/Close'
 
 
 function Header() {
@@ -22,6 +23,23 @@ function Header() {
         <CustomMenu />
 
       </RightMenu>
+      <BurgerNav>
+        <CloseWeapper>
+          <CustomClose />
+        </CloseWeapper>
+          <li><a href='#'>Model S</a></li>
+          <li><a href='#'>Model 3</a></li>
+          <li><a href='#'>Model X</a></li>
+          <li><a href='#'>Model Y</a></li>
+          <li><a href='#'>Cyber Truck</a></li>
+          <li><a href='#'>Charger</a></li>
+          <li><a href='#'>Shop</a></li>
+          <li><a href='#'>Account</a></li>
+          <li><a href='#'>Discover</a></li>
+          <li><a href='#'>Energy</a></li>
+
+
+      </BurgerNav>
      
     
     </Container>
@@ -41,6 +59,7 @@ const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 
   
   
@@ -83,5 +102,42 @@ const RightMenu = styled.div`
 
 const CustomMenu = styled(MenuIcon)`
   cursor: pointer;
+
+`
+
+const BurgerNav = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  width: 300px;
+  z-index: 16;
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  li{
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+        a{
+            font-weight: 900;
+        }
+  }
+
+`
+
+
+
+const CustomClose = styled(CloseIcon)`
+
+
+`
+
+const CloseWeapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
 
 `
