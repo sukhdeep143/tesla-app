@@ -13,7 +13,7 @@ function Header() {
          <a href='https://www.tesla.com/models'>Model S</a>
          <a href='https://www.tesla.com/model3'>Model 3</a>
          <a href='https://www.tesla.com/modelx'>Model X</a>
-         <a href='https://tesla.com/modely'>Model Y</a>
+         <a href='https://www.tesla.com/modely'>Model Y</a>
 
       </Menu>
       <RightMenu>
