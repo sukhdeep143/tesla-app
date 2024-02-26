@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@material-ui/icons/Close'
 
 
 function Header() {
+
+  const [BurgerStatus, setBurgerStatus] = useState(false);
+
   return (
     <Container>
       <a href='https://www.tesla.com/modely' >
@@ -20,12 +23,12 @@ function Header() {
       <RightMenu>
         <a href='https://shop.tesla.com/'>Shop</a>
         <a href='https://auth.tesla.com/en_us/oauth2/v1/authorize?redirect_uri=https%3A%2F%2Fwww.tesla.com%2Fteslaaccount%2Fowner-xp%2Fauth%2Fcallback&response_type=code&client_id=ownership&scope=offline_access%20openid%20ou_code%20email%20phone&audience=https%3A%2F%2Fownership.tesla.com%2F&locale=en-US'>Tesla Account</a>
-        <CustomMenu />
+        <CustomMenu onClick={()=>setBurgerStatus(true)} />
 
       </RightMenu>
-      <BurgerNav>
+      <BurgerNav show={BurgerStatus}>
         <CloseWeapper>
-          <CustomClose />
+          <CustomClose onClick={()=>setBurgerStatus(false)}/>
         </CloseWeapper>
           <li><a href='https://www.tesla.com/models'>Model S</a></li>
           <li><a href='https://www.tesla.com/model3'>Model 3</a></li>
@@ -37,11 +40,7 @@ function Header() {
           <li><a href='#'>Account</a></li>
           <li><a href='#'>Discover</a></li>
           <li><a href='#'>Energy</a></li>
-
-
       </BurgerNav>
-     
-    
     </Container>
   )
 }
@@ -118,6 +117,8 @@ const BurgerNav = styled.div`
   display: flex;
   flex-direction: column;
   text-align: start;
+  transform: ${props => props.show ? 'translateX(0)': 'translateX(100%)'};
+  transition: transform 0.2s ease-in;
   li{
       padding: 15px 0;
       border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -139,5 +140,6 @@ const CustomClose = styled(CloseIcon)`
 const CloseWeapper = styled.div`
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
 
 `
